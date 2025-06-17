@@ -24,7 +24,5 @@ npm run dev
 
 ## ⭐ Motivation
 
-> 💡**PS:** If you found this project helpful or inspiring,  
-> please **[⭐ star the repository](https://github.com/arman61-hub/Portfolio)** — it keeps me motivated to build and share more awesome projects like this one!
-
+> 💡**PS:** If you found this project helpful or inspiring, please **[⭐ star the repository](https://github.com/arman61-hub/Portfolio)** — it keeps me motivated to build and share more awesome projects like this one!
 ---
