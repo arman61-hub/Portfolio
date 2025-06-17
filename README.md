@@ -1,7 +1,6 @@
 # 🌐 Personal Portfolio
 
-Welcome to the personal portfolio website of **Arman Redhu**, a passionate **Full Stack Developer** and **Programming Enthusiast** from **IIIT Kota** 🎓.  
-This site showcases my journey, skills, projects, and achievements — all wrapped in a modern, responsive design ✨.
+Welcome to the personal portfolio website of **Arman Redhu**, a passionate **Full Stack Developer** and **Programming Enthusiast** from **IIIT Kota** 🎓. This site showcases my journey, skills, projects, and achievements — all wrapped in a modern, responsive design ✨.
 
 ---
 
