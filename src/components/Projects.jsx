@@ -34,7 +34,7 @@ const Projects = () => {
       title: "EcoWaste",
       description: "♻️ EcoWaste is a smart waste management and recycling platform with AI-based identification, community engagement, and educational resources. 🚀",
       githubLink: "https://github.com/arman61-hub/EcoWaste",
-      projectLink: "#",
+      projectLink: "https://eco-waste-navy.vercel.app/",
       icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.google_gemini_logo],
     },
     {
