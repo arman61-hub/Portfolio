@@ -5,7 +5,8 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const Social = () => {
   const [showSocial, setShowSocial] = useState(true);
-
+  const resumeLink = import.meta.env.VITE_RESUME_LINK;
+  
   const checkSectionsInView = () => {
     const sections = ['Home', 'About', 'Education'];
     const buffer = 80;
@@ -73,7 +74,7 @@ const Social = () => {
         </>
       ),
       style: 'rounded-br-md bg-gray-500',
-      href: import.meta.env.VITE_RESUME_LINK, 
+      href: resumeLink, 
     },
   ];
 
