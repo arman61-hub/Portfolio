@@ -73,7 +73,7 @@ const Social = () => {
         </>
       ),
       style: 'rounded-br-md bg-gray-500',
-      href: 'https://drive.google.com/file/d/1MDIQrAKzdZwWTpkv2DbjCKtI-6wocIAt/view?usp=sharing/',
+      href: import.meta.env.VITE_RESUME_LINK, 
     },
   ];
 
