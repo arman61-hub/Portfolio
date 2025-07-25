@@ -31,14 +31,14 @@ const Skills = () => {
     { id: 15, src: tech_logo.vscode, title: "VS Code", style: "shadow-blue-400", category: "Tools" },
     { id: 16, src: tech_logo.postman, title: "Postman", style: "shadow-orange-400", category: "Tools" },
     { id: 17, src: tech_logo.linux, title: "Linux", style: "shadow-yellow-300", category: "Tools" },
-    { id: 17, src: tech_logo.jupyter, title: "Jupyter", style: "shadow-orange-500", category: "Tools" },
+    { id: 18, src: tech_logo.jupyter, title: "Jupyter", style: "shadow-orange-500", category: "Tools" },
   ];
 
   const categories = ["Languages", "Libraries/Frameworks", "Databases", "Tools"];
   const filteredTechs = techs.filter(t => t.category === activeCategory);
 
   return (
-    <div name="Skills" className="w-full px-4 py-8 text-[#00040f] dark:text-[#e1e1e1]">
+    <div name="Skills" className="w-full overflow-x-hidden px-4 py-8 text-[#00040f] dark:text-[#e1e1e1]">
       <div className="max-w-screen-xl mx-auto flex flex-col justify-center w-full h-full">
         <h1 className="text-center font-extrabold text-4xl sm:text-5xl mb-4 dark:text-slate-300">
           Skills
@@ -63,11 +63,24 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 transition-all duration-500" data-aos="fade-left" key={activeCategory}>
+        <div
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6"
+          data-aos="fade-left"
+          key={activeCategory}
+        >
           {filteredTechs.map(({ id, src, title, style }) => (
-            <div key={id} className={`shadow-md hover:scale-105 duration-300 py-6 px-4 rounded-xl flex flex-col items-center justify-center ${style}`}>
-              <img src={src} alt={title} className="w-14 h-14 sm:w-16 sm:h-16 object-contain mb-3" />
-              <p className="text-sm sm:text-base font-medium text-center">{title}</p>
+            <div
+              key={id}
+              className={`shadow-md hover:scale-105 duration-300 py-6 px-4 rounded-xl flex flex-col items-center justify-center ${style}`}
+            >
+              <img
+                src={src}
+                alt={title}
+                className="w-12 h-12 sm:w-16 sm:h-16 object-contain mb-2"
+              />
+              <p className="text-sm sm:text-base font-medium text-center break-words">
+                {title}
+              </p>
             </div>
           ))}
         </div>
