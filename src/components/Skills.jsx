@@ -23,15 +23,17 @@ const Skills = () => {
     { id: 9, src: tech_logo.node, title: "Node.js", style: "shadow-lime-500", category: "Libraries/Frameworks" },
     { id: 10, src: tech_logo.php, title: "PHP", style: "shadow-indigo-500", category: "Libraries/Frameworks" },
 
-    { id: 11, src: tech_logo.mysql, title: "MySQL", style: "shadow-blue-500", category: "Databases" },
+    { id: 11, src: tech_logo.postgresql, title: "PostgreSQL", style: "shadow-blue-800", category: "Databases" },
     { id: 12, src: tech_logo.mongodb, title: "MongoDB", style: "shadow-green-600", category: "Databases" },
+    { id: 13, src: tech_logo.mysql, title: "MySQL", style: "shadow-blue-500", category: "Databases" },
 
-    { id: 13, src: tech_logo.git, title: "Git", style: "shadow-orange-500", category: "Tools" },
-    { id: 14, src: tech_logo.github, title: "GitHub", style: "shadow-neutral-500", category: "Tools" },
-    { id: 15, src: tech_logo.vscode, title: "VS Code", style: "shadow-blue-400", category: "Tools" },
-    { id: 16, src: tech_logo.postman, title: "Postman", style: "shadow-orange-400", category: "Tools" },
-    { id: 17, src: tech_logo.linux, title: "Linux", style: "shadow-yellow-300", category: "Tools" },
-    { id: 18, src: tech_logo.jupyter, title: "Jupyter", style: "shadow-orange-500", category: "Tools" },
+    { id: 14, src: tech_logo.git, title: "Git", style: "shadow-orange-500", category: "Tools" },
+    { id: 15, src: tech_logo.github, title: "GitHub", style: "shadow-neutral-500", category: "Tools" },
+    { id: 16, src: tech_logo.vscode, title: "VS Code", style: "shadow-blue-400", category: "Tools" },
+    { id: 17, src: tech_logo.postman, title: "Postman", style: "shadow-orange-400", category: "Tools" },
+    { id: 18, src: tech_logo.linux, title: "Linux", style: "shadow-yellow-300", category: "Tools" },
+    { id: 19, src: tech_logo.jupyter, title: "Jupyter", style: "shadow-orange-500", category: "Tools" },
+    { id: 20, src: tech_logo.neon, title: "Neon", style: "shadow-emerald-400", category: "Tools" },
   ];
 
   const categories = ["Languages", "Libraries/Frameworks", "Databases", "Tools"];

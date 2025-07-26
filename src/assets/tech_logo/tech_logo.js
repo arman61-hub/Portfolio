@@ -1,4 +1,5 @@
 import c from "./c.png";
+import clipdrop from "./clipdrop.png";
 import cpp from "./cpp.png";
 import css from "./css.png";
 import express from "./express.png";
@@ -13,8 +14,10 @@ import linux from "./linux.png";
 import mc from "./mc.png";
 import mongodb from "./mongodb.png";
 import mysql from "./mysql.png";
+import neon from "./neon.svg";
 import node from "./node.png";
 import php from "./php.png";
+import postgresql from "./postgresql.png";
 import postman from "./postman.png";
 import python from "./python.png";
 import razorpay_logo from "./razorpay_logo.png";
@@ -26,6 +29,7 @@ import vscode from "./vscode.png";
 
 export const tech_logo = {
     c,
+    clipdrop,
     cpp,
     css,
     express,
@@ -40,8 +44,10 @@ export const tech_logo = {
     mc,
     mongodb,
     mysql,
+    neon,
     node,
     php,
+    postgresql,
     postman,
     python,
     razorpay_logo,

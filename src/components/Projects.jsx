@@ -22,6 +22,14 @@ const Projects = () => {
 
   const project = [
     {
+      imgUrl: projects.GenCraftAi,
+      title: "GenCraftAi",
+      description: "✨ GenCraftAI — An AI-powered SaaS platform to ✍️ generate blogs, 📰 craft article titles, 🧾 review resumes, and 🖼️ create visuals — all in one creative hub.",
+      githubLink: "https://github.com/arman61-hub/GenCraftAI/",
+      projectLink: "https://gen-craft-ai.vercel.app/",
+      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.postgresql, tech_logo.tailwindcss, tech_logo.google_gemini_logo, tech_logo.clipdrop, tech_logo.neon],
+    },
+    {
       imgUrl: projects.DocNow,
       title: "DocNow",
       description: "🩺 DocNow — A smart React web app to book appointments, 💊 manage prescriptions, and 💳 pay securely — all in one place.",
