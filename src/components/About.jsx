@@ -25,9 +25,9 @@ const About = () => {
           <p className="mt-4 text-[#00040f] dark:text-slate-300 text-base sm:text-lg leading-relaxed">
             I value clean code, continuous learning, and collaborative development. Whether it's building user-centric features or tackling complex backend logic, I'm always eager to contribute to meaningful and innovative projects.
           </p>
-          <div className="mt-6 flex justify-center md:justify-start">
-            <ScrollLink to="Contact" smooth duration={500} offset={-60} className="cursor-pointer px-5 py-2 text-sm font-semibold rounded-xl text-white bg-[#5f6fff] hover:bg-[#4d5df0] transition">
-              Contact Me
+          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <ScrollLink to="Contact" smooth={true} duration={500} offset={-60} className="bg-[#5f6fff] hover:bg-[#4d5df0] text-white px-6 py-2 rounded-lg shadow-md transition duration-300 cursor-pointer font-semibold text-base" >
+              📬 Contact Me
             </ScrollLink>
           </div>
         </div>
