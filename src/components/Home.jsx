@@ -54,6 +54,7 @@ const Home = () => {
               to="Projects"
               smooth={true}
               duration={500}
+              offset={-60}
               className="bg-gray-800 text-white px-6 py-2 rounded-lg shadow hover:bg-gray-900 transition duration-300 cursor-pointer"
             >
               🚀 View Projects
