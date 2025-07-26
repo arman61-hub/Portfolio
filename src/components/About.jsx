@@ -20,7 +20,7 @@ const About = () => {
             I’m Arman Redhu, a passionate Full Stack Developer dedicated to transforming ideas into seamless digital experiences. With expertise in React.js, Node.js, and Tailwind CSS, I build scalable, efficient, and intuitive web applications.
           </p>
           <p className="mt-4 text-[#00040f] dark:text-slate-300 text-base sm:text-lg leading-relaxed">
-            My portfolio includes impactful projects such as <strong>DocNow</strong>, <strong>EcoWaste</strong>, and <strong>TrendIntel</strong>, where I focused on AI integration, secure authentication, and performance optimization.
+            My portfolio includes impactful projects such as <strong>GenCraftAI</strong>, <strong>DocNow</strong>, and <strong>EcoWaste</strong>, where I focused on AI integration, secure authentication, and performance optimization.
           </p>
           <p className="mt-4 text-[#00040f] dark:text-slate-300 text-base sm:text-lg leading-relaxed">
             I value clean code, continuous learning, and collaborative development. Whether it's building user-centric features or tackling complex backend logic, I'm always eager to contribute to meaningful and innovative projects.
