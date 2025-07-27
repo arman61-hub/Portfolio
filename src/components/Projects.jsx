@@ -27,7 +27,7 @@ const Projects = () => {
       description: "✨ GenCraftAI — An AI-powered SaaS platform to ✍️ generate blogs, 📰 craft article titles, 🧾 review resumes, and 🖼️ create visuals — all in one creative hub.",
       githubLink: "https://github.com/arman61-hub/GenCraftAI/",
       projectLink: "https://gen-craft-ai.vercel.app/",
-      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.postgresql, tech_logo.tailwindcss, tech_logo.google_gemini_logo, tech_logo.clipdrop, tech_logo.neon],
+      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.postgresql, tech_logo.tailwindcss, tech_logo.gemini_ai, tech_logo.clipdrop, tech_logo.neon],
     },
     {
       imgUrl: projects.DocNow,
@@ -35,7 +35,7 @@ const Projects = () => {
       description: "🩺 DocNow — A smart React web app to book appointments, 💊 manage prescriptions, and 💳 pay securely — all in one place.",
       githubLink: "https://github.com/arman61-hub/DocNow/",
       projectLink: "https://docnow-sr1f.onrender.com/",
-      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.razorpay_logo],
+      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.razorpay],
     },
     {
       imgUrl: projects.EcoWaste,
@@ -43,7 +43,7 @@ const Projects = () => {
       description: "♻️ EcoWaste is a smart waste management and recycling platform with AI-based identification, community engagement, and educational resources. 🚀",
       githubLink: "https://github.com/arman61-hub/EcoWaste",
       projectLink: "https://eco-waste-navy.vercel.app/",
-      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.google_gemini_logo],
+      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.gemini_ai],
     },
     {
       imgUrl: projects.TrendIntel,

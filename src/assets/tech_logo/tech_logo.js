@@ -1,31 +1,30 @@
-import c from "./c.png";
-import clipdrop from "./clipdrop.png";
-import cpp from "./cpp.png";
-import css from "./css.png";
-import express from "./express.png";
-import git from "./git.png";
-import github from "./github.png";
-import google_gemini_logo from "./google_gemini_logo.png";
-import html from "./html.png";
-import java from "./java.png";
-import javascript from "./javascript.png";
-import jupyter from "./jupyter.png";
-import linux from "./linux.png";
-import mc from "./mc.png";
-import mongodb from "./mongodb.png";
-import mysql from "./mysql.png";
+import c from "./c.svg";
+import clipdrop from "./clipdrop.jpg";
+import cpp from "./cpp.svg";
+import css from "./css.svg";
+import express from "./express.svg";
+import git from "./git.svg";
+import github from "./github.svg";
+import gemini_ai from "./gemini_ai.svg";
+import html from "./html.svg";
+import java from "./java.svg";
+import javascript from "./javascript.svg";
+import jupyter from "./jupyter.svg";
+import linux from "./linux.svg";
+import mongodb from "./mongodb.svg";
+import mysql from "./mysql.svg";
 import neon from "./neon.svg";
-import node from "./node.png";
-import php from "./php.png";
-import postgresql from "./postgresql.png";
-import postman from "./postman.png";
-import python from "./python.png";
-import razorpay_logo from "./razorpay_logo.png";
-import react from "./react.png";
-import redux from "./redux.png";
-import tailwindcss from "./tailwindcss.png";
-import vercel from "./vercel.png";
-import vscode from "./vscode.png";
+import node from "./node.svg";
+import php from "./php.svg";
+import postgresql from "./postgresql.svg";
+import postman from "./postman.svg";
+import python from "./python.svg";
+import razorpay from "./razorpay.svg";
+import react from "./react.svg";
+import redux from "./redux.svg";
+import tailwindcss from "./tailwindcss.svg";
+import vercel from "./vercel.svg";
+import vscode from "./vscode.svg";
 
 export const tech_logo = {
     c,
@@ -35,13 +34,12 @@ export const tech_logo = {
     express,
     git,
     github,
-    google_gemini_logo,
+    gemini_ai,
     html,
     java,
     javascript,
     jupyter,
     linux,
-    mc,
     mongodb,
     mysql,
     neon,
@@ -50,7 +48,7 @@ export const tech_logo = {
     postgresql,
     postman,
     python,
-    razorpay_logo,
+    razorpay,
     react,
     redux,
     tailwindcss,
