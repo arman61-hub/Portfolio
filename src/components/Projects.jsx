@@ -40,7 +40,7 @@ const Projects = () => {
     {
       imgUrl: projects.Portfolio,
       title: "Portfolio Site",
-      description: "🚀 MyPortfolio — A modern React + Tailwind showcase with 🌗 theme switcher, ✨ fluid animations, 🧩 interactive projects, and ⚙️ smart custom hooks — built for impact.",
+      description: "🚀 MyPortfolio — A modern React + Tailwind showcase with 🌗 theme switcher, ✨ fluid animations, and 🧩 interactive projects — built for impact.",
       githubLink: "https://github.com/arman61-hub/portfolio",
       projectLink: "https://arman-redhu-portfolio.vercel.app/",
       icons: [tech_logo.react, tech_logo.tailwindcss],
