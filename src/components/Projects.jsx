@@ -1,33 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Button } from "@mui/material";
 import { FaGithub } from "react-icons/fa";
 import { TbLogin2 } from "react-icons/tb";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
-import {projects} from "../assets/projects/projects.js";  
-import {tech_logo} from "../assets/tech_logo/tech_logo.js";  
+import { projects } from "../assets/projects/projects.js";
+import { tech_logo } from "../assets/tech_logo/tech_logo.js";
 
 const Projects = () => {
-  const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(0);
+  const projectSectionRef = useRef(null);
 
-  useEffect(() => {
-    AOS.init();
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const project = [
+  const projectList = [
     {
       imgUrl: projects.GenCraftAi,
       title: "GenCraftAi",
       description: "✨ GenCraftAI — An AI-powered SaaS platform to ✍️ generate blogs, 📰 craft article titles, 🧾 review resumes, and 🖼️ create visuals — all in one creative hub.",
       githubLink: "https://github.com/arman61-hub/GenCraftAI/",
       projectLink: "https://gen-craft-ai.vercel.app/",
-      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.postgresql, tech_logo.tailwindcss, tech_logo.gemini_ai, tech_logo.clipdrop, tech_logo.neon],
+      icons: [ tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.postgresql, tech_logo.tailwindcss, tech_logo.gemini_ai, tech_logo.clipdrop, tech_logo.neon],
     },
     {
       imgUrl: projects.DocNow,
@@ -35,7 +27,7 @@ const Projects = () => {
       description: "🩺 DocNow — A smart React web app to book appointments, 💊 manage prescriptions, and 💳 pay securely — all in one place.",
       githubLink: "https://github.com/arman61-hub/DocNow/",
       projectLink: "https://docnow-sr1f.onrender.com/",
-      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.razorpay],
+      icons: [ tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.razorpay],
     },
     {
       imgUrl: projects.EcoWaste,
@@ -43,7 +35,16 @@ const Projects = () => {
       description: "♻️ EcoWaste is a smart waste management and recycling platform with AI-based identification, community engagement, and educational resources. 🚀",
       githubLink: "https://github.com/arman61-hub/EcoWaste",
       projectLink: "https://eco-waste-navy.vercel.app/",
-      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.gemini_ai],
+      icons: [ tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.gemini_ai],
+    },
+    {
+      imgUrl: projects.Portfolio,
+      title: "Portfolio Site",
+      description: "🚀 MyPortfolio — A modern React + Tailwind showcase with 🌗 theme switcher, ✨ fluid animations, 🧩 interactive projects, and ⚙️ smart custom hooks — built for impact.",
+      githubLink: "https://github.com/arman61-hub/portfolio",
+      projectLink: "https://arman-redhu-portfolio.vercel.app/",
+      
+      icons: [tech_logo.react, tech_logo.tailwindcss],
     },
     {
       imgUrl: projects.TrendIntel,
@@ -59,7 +60,7 @@ const Projects = () => {
       description: "🍔 BurgerHut – A sleek and user-friendly web app for viewing menu options and booking advance slots for your favorite burgers! 🚀🔥",
       githubLink: "https://github.com/arman61-hub/BurgerHut",
       projectLink: "http://burgerhut.free.nf/",
-      icons: [tech_logo.html, tech_logo.css, tech_logo.javascript, tech_logo.php, tech_logo.mysql],
+      icons: [ tech_logo.html, tech_logo.css, tech_logo.javascript, tech_logo.php, tech_logo.mysql],
     },
     {
       imgUrl: projects.GameArena,
@@ -79,58 +80,96 @@ const Projects = () => {
     },
   ];
 
-  const displayedProjects = isMobile ? (showAll ? project : project.slice(0, 3)) : project;
-  const toggleShowAll = () => setShowAll(!showAll);
+  const batchSize = isMobile ? 2 : 3;
+
+  useEffect(() => {
+    AOS.init();
+    const handleResize = () => {
+      const mobile = window.innerWidth < 1024;
+      setIsMobile(mobile);
+      setVisibleCount(mobile ? 2 : 3);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleShowMore = () => {
+    setVisibleCount((prev) => prev + batchSize);
+  };
+
+  const handleShowLess = () => {
+    setVisibleCount(batchSize);
+    if (projectSectionRef.current) {
+      const offset = -80; 
+      const top =
+        projectSectionRef.current.getBoundingClientRect().top +
+        window.pageYOffset +
+        offset;
+
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
+
+  const displayedProjects = projectList.slice(0, visibleCount);
+  const hasMore = visibleCount < projectList.length;
 
   return (
-    <div name="Projects" className="p-5 mx-20 mb-10 mt-10 min-h-screen max-sm:p-2 max-sm:mx-5">
-      <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl my-5 max-sm:text-4xl">
+    <div
+      ref={projectSectionRef}
+      name="Projects"
+      className="p-5 mx-auto mt-10 max-w-screen-xl min-h-screen"
+    >
+      <h1 className="text-[#00040f] dark:text-slate-200 text-center font-extrabold text-5xl my-5 max-sm:text-4xl">
         Projects
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-10" data-aos="fade-right">
+      <div
+        className="grid gap-8 mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        data-aos="fade-up"
+      >
         {displayedProjects.map(
           ({ imgUrl, title, description, githubLink, projectLink, icons }) => (
-            <div key={title} className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-tl from-[#e1e1e1] to-[#fff] dark:from-[#050710] dark:to-[#142a47] text-[#00040f] dark:text-[#e1e1e1] hover:scale-105 transition-transform duration-300 ease-in-out p-5 flex flex-col">
-              <div className="relative flex flex-col gap-5 justify-between h-full">
-                <div className="wrapper flex gap-4 sm:flex-row flex-col-reverse">
-                  <div className="flex flex-col sm:w-[40%]">
-                    <h1 className="text-2xl font-bold mb-2">{title}</h1>
-                    <p className="text-[13px] md:text-[14px]">{description}</p>
-                  </div>
-                  <div className="sm:w-[60%] flex justify-center items-center">
-                    <a href={projectLink} target="_blank" rel="noopener noreferrer">
-                      <img className="rounded-xl cursor-pointer" src={imgUrl} alt={title}/>
-                    </a>
-                  </div>
+            <div
+              key={title}
+              className="bg-[#0f172a] dark:bg-[#111827] text-white rounded-2xl shadow-xl flex flex-col justify-between transition hover:-translate-y-1 duration-300"
+            >
+              <img
+                src={imgUrl}
+                alt={title}
+                className="w-full h-48 object-cover rounded-t-2xl"
+              />
+              <div className="p-5 flex flex-col flex-grow">
+                <h2 className="text-xl font-semibold mb-2">{title}</h2>
+                <p className="text-sm text-gray-300 mb-4">{description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {icons.map((icon, i) => (
+                    <img
+                      key={i}
+                      src={icon}
+                      alt="tech"
+                      className="w-7 h-7 object-contain"
+                    />
+                  ))}
                 </div>
-                <div className="flex flex-col sm:flex-row sm:justify-between items-center">
-                  <div className="tech-stack flex flex-wrap gap-3 justify-center mt-3 sm:mt-0">
-                    {icons.map((icon, idx) => (
-                      <img key={idx} src={icon} alt="tech" className="w-8 h-8 object-contain"/>
-                    ))}
-                  </div>
-                  <div className="flex gap-3 mt-4 sm:mt-0 items-center">
-                    {isMobile ? (
-                      <>
-                        <Button variant="outlined" href={githubLink} target="_blank">
-                          Github
-                        </Button>
-                        <Button variant="outlined" href={projectLink} target="_blank">
-                          Live
-                        </Button>
-                      </>
-                    ) : (
-                      <>
-                        <a title="Github" href={githubLink} target="_blank">
-                          <FaGithub className="h-8 w-8" />
-                        </a>
-                        <a title="Live Link" href={projectLink} target="_blank">
-                          <TbLogin2 className="h-8 w-8" />
-                        </a>
-                      </>
-                    )}
-                  </div>
+                <div className="mt-auto flex gap-3">
+                  <a
+                    href={projectLink}
+                    target="_blank"
+                    className="flex-1 inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium text-center py-2 rounded-lg transition"
+                  >
+                    <TbLogin2 className="inline mr-2" />
+                    Live Demo
+                  </a>
+                  <a
+                    href={githubLink}
+                    target="_blank"
+                    className="flex-1 inline-block border border-slate-400 hover:border-white text-sm text-white text-center py-2 rounded-lg transition"
+                  >
+                    <FaGithub className="inline mr-2" />
+                    Code
+                  </a>
                 </div>
               </div>
             </div>
@@ -138,21 +177,21 @@ const Projects = () => {
         )}
       </div>
 
-      {isMobile && project.length > 3 && (
-        <div className="flex justify-center mt-6">
+      {projectList.length > batchSize && (
+        <div className="flex justify-center mt-8">
           <button
-            onClick={toggleShowAll}
-            className="px-8 py-3 rounded-full font-medium text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition duration-300 ease-in-out shadow-lg flex items-center gap-2"
+            onClick={hasMore ? handleShowMore : handleShowLess}
+            className="px-6 py-3 rounded-full font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 transition duration-300 ease-in-out shadow-lg flex items-center gap-2"
           >
-            {showAll ? (
+            {hasMore ? (
               <>
-                Show Less
-                <FiChevronUp className="inline" />
+                Show More
+                <FiChevronDown />
               </>
             ) : (
               <>
-                See More
-                <FiChevronDown className="inline" />
+                Show Less
+                <FiChevronUp />
               </>
             )}
           </button>
