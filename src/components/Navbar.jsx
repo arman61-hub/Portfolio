@@ -74,7 +74,7 @@ export default function Navbar() {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={-80}
+                  offset={-60}
                   onSetActive={() => setActiveLink(to)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-xl font-medium cursor-pointer transition-all duration-300 ${
                     activeLink === to
@@ -127,7 +127,7 @@ export default function Navbar() {
                     spy={true}
                     smooth={true}
                     duration={500}
-                    offset={-80}
+                    offset={-60}
                     onClick={() => {
                       setMenuOpen(false);
                       setActiveLink(to);

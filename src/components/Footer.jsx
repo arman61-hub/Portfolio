@@ -29,7 +29,7 @@ const Footer = () => {
             ['Projects', 'Projects'],
             ['Contact', 'Contact'],
           ].map(([label, to]) => (
-            <Link key={to} to={to} smooth duration={200} offset={-80} className="text-lg cursor-pointer block mb-2 hover:text-slate-500 dark:hover:text-sky-300 hover:font-semibold transition-all duration-200" >
+            <Link key={to} to={to} smooth duration={200} offset={-60} className="text-lg cursor-pointer block mb-2 hover:text-slate-500 dark:hover:text-sky-300 hover:font-semibold transition-all duration-200" >
               <FaChevronCircleRight className="inline pr-2" /> {label}
             </Link>
           ))}

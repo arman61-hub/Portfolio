@@ -9,7 +9,7 @@ const Social = () => {
   
   const checkSectionsInView = () => {
     const sections = ['Home', 'About', 'Education'];
-    const buffer = 80;
+    const buffer = 60;
 
     const isAnyVisible = sections.some((id) => {
       const section = document.querySelector(`[name='${id}']`);

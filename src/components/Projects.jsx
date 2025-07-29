@@ -101,7 +101,7 @@ const Projects = () => {
   const handleShowLess = () => {
     setVisibleCount(batchSize);
     if (projectSectionRef.current) {
-      const offset = -80; 
+      const offset = -60; 
       const top =
         projectSectionRef.current.getBoundingClientRect().top +
         window.pageYOffset +
