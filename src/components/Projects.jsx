@@ -19,7 +19,7 @@ const Projects = () => {
       description: "✨ GenCraftAI — An AI-powered SaaS platform to ✍️ generate blogs, 📰 craft article titles, 🧾 review resumes, and 🖼️ create visuals — all in one creative hub.",
       githubLink: "https://github.com/arman61-hub/GenCraftAI/",
       projectLink: "https://gen-craft-ai.vercel.app/",
-      icons: [ tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.postgresql, tech_logo.tailwindcss, tech_logo.gemini_ai, tech_logo.clipdrop, tech_logo.neon],
+      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.postgresql, tech_logo.tailwindcss, tech_logo.gemini_ai, tech_logo.clipdrop, tech_logo.neon],
     },
     {
       imgUrl: projects.DocNow,
@@ -27,7 +27,7 @@ const Projects = () => {
       description: "🩺 DocNow — A smart React web app to book appointments, 💊 manage prescriptions, and 💳 pay securely — all in one place.",
       githubLink: "https://github.com/arman61-hub/DocNow/",
       projectLink: "https://docnow-sr1f.onrender.com/",
-      icons: [ tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.razorpay],
+      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.razorpay],
     },
     {
       imgUrl: projects.EcoWaste,
@@ -35,7 +35,7 @@ const Projects = () => {
       description: "♻️ EcoWaste is a smart waste management and recycling platform with AI-based identification, community engagement, and educational resources. 🚀",
       githubLink: "https://github.com/arman61-hub/EcoWaste",
       projectLink: "https://eco-waste-navy.vercel.app/",
-      icons: [ tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.gemini_ai],
+      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.gemini_ai],
     },
     {
       imgUrl: projects.Portfolio,
@@ -43,7 +43,6 @@ const Projects = () => {
       description: "🚀 MyPortfolio — A modern React + Tailwind showcase with 🌗 theme switcher, ✨ fluid animations, 🧩 interactive projects, and ⚙️ smart custom hooks — built for impact.",
       githubLink: "https://github.com/arman61-hub/portfolio",
       projectLink: "https://arman-redhu-portfolio.vercel.app/",
-      
       icons: [tech_logo.react, tech_logo.tailwindcss],
     },
     {
@@ -60,7 +59,7 @@ const Projects = () => {
       description: "🍔 BurgerHut – A sleek and user-friendly web app for viewing menu options and booking advance slots for your favorite burgers! 🚀🔥",
       githubLink: "https://github.com/arman61-hub/BurgerHut",
       projectLink: "http://burgerhut.free.nf/",
-      icons: [ tech_logo.html, tech_logo.css, tech_logo.javascript, tech_logo.php, tech_logo.mysql],
+      icons: [tech_logo.html, tech_logo.css, tech_logo.javascript, tech_logo.php, tech_logo.mysql],
     },
     {
       imgUrl: projects.GameArena,
@@ -101,7 +100,7 @@ const Projects = () => {
   const handleShowLess = () => {
     setVisibleCount(batchSize);
     if (projectSectionRef.current) {
-      const offset = -60; 
+      const offset = -60;
       const top =
         projectSectionRef.current.getBoundingClientRect().top +
         window.pageYOffset +
@@ -110,7 +109,6 @@ const Projects = () => {
       window.scrollTo({ top, behavior: "smooth" });
     }
   };
-
 
   const displayedProjects = projectList.slice(0, visibleCount);
   const hasMore = visibleCount < projectList.length;
@@ -121,19 +119,19 @@ const Projects = () => {
       name="Projects"
       className="p-5 mx-auto mt-10 max-w-screen-xl min-h-screen"
     >
-      <h1 className="text-[#00040f] dark:text-slate-200 text-center font-extrabold text-5xl my-5 max-sm:text-4xl">
+      <h1 className="text-gray-900 dark:text-slate-200 text-center font-extrabold text-5xl my-5 max-sm:text-4xl">
         Projects
       </h1>
 
       <div
         className="grid gap-8 mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         data-aos="fade-up"
-      >
+      > 
         {displayedProjects.map(
           ({ imgUrl, title, description, githubLink, projectLink, icons }) => (
             <div
               key={title}
-              className="bg-[#0f172a] dark:bg-[#111827] text-white rounded-2xl shadow-xl flex flex-col justify-between transition hover:-translate-y-1 duration-300"
+              className="bg-gradient-to-tl from-[#e1e1e1] to-[#fff] dark:from-[#050710] dark:to-[#142a47] text-[#00040f] dark:text-[#e1e1e1] border border-gray-200 dark:border-transparent rounded-2xl shadow-xl flex flex-col justify-between transition hover:-translate-y-1 duration-300"
             >
               <img
                 src={imgUrl}
@@ -142,7 +140,9 @@ const Projects = () => {
               />
               <div className="p-5 flex flex-col flex-grow">
                 <h2 className="text-xl font-semibold mb-2">{title}</h2>
-                <p className="text-sm text-gray-300 mb-4">{description}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                  {description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {icons.map((icon, i) => (
                     <img
@@ -165,7 +165,7 @@ const Projects = () => {
                   <a
                     href={githubLink}
                     target="_blank"
-                    className="flex-1 inline-block border border-slate-400 hover:border-white text-sm text-white text-center py-2 rounded-lg transition"
+                    className="flex-1 inline-block border border-gray-400 dark:border-gray-300 text-sm text-gray-800 dark:text-white text-center py-2 rounded-lg transition hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     <FaGithub className="inline mr-2" />
                     Code
@@ -181,7 +181,7 @@ const Projects = () => {
         <div className="flex justify-center mt-8">
           <button
             onClick={hasMore ? handleShowMore : handleShowLess}
-            className="px-6 py-3 rounded-full font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 transition duration-300 ease-in-out shadow-lg flex items-center gap-2"
+            className="px-6 py-3 rounded-full font-medium text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 transition duration-300 ease-in-out shadow-lg flex items-center gap-2"
           >
             {hasMore ? (
               <>
