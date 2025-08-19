@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
           </div>
           <p className="text-base sm:text-lg mt-2 max-sm:text-center">
-            PR Executive at IIIT Kernel | Reliance Foundation Scholar | IIIT Kota'27
+            Unstop Campus Ambassador | Content & Editorial Lead and Public Relations & Outreach Executive at IIIT Kernel | Reliance Foundation Scholar | IIIT Kota'27
           </p>
         </div>
 
@@ -57,7 +57,7 @@ const Footer = () => {
       </div>
 
       <p className="text-center text-[#00040f] dark:text-slate-300 text-sm sm:text-base mt-10 pt-4 border-t border-slate-300 dark:border-sky-800 tracking-widest">
-        made with ❤️ by Arman Redhu. All rights reserved.
+        Made with ❤️ by Arman Redhu. All rights reserved.
       </p>
     </section>
   );
