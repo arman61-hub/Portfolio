@@ -12,8 +12,6 @@ const Home = () => {
     deleteSpeed: 50,
   });
 
-  const resumeLink = import.meta.env.VITE_RESUME_LINK;
-
   return (
     <div
       name="Home"
@@ -43,7 +41,7 @@ const Home = () => {
           {/* Buttons */}
           <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
-              href={resumeLink}
+              href="https://arman61-hub.github.io/Resume/Arman_Redhu_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition duration-300"
