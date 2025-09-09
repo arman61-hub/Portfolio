@@ -22,6 +22,7 @@ import python from "./python.svg";
 import razorpay from "./razorpay.svg";
 import react from "./react.svg";
 import redux from "./redux.svg";
+import stripe from "./stripe.svg";
 import tailwindcss from "./tailwindcss.svg";
 import vercel from "./vercel.svg";
 import vscode from "./vscode.svg";
@@ -51,6 +52,7 @@ export const tech_logo = {
     razorpay,
     react,
     redux,
+    stripe,
     tailwindcss,
     vercel,
     vscode,

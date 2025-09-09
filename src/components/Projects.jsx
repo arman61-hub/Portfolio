@@ -27,7 +27,7 @@ const Projects = () => {
       description: "🩺 DocNow — A smart React web app to book appointments, 💊 manage prescriptions, and 💳 pay securely — all in one place.",
       githubLink: "https://github.com/arman61-hub/DocNow/",
       projectLink: "https://docnow-sr1f.onrender.com/",
-      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.razorpay],
+      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.mongodb, tech_logo.tailwindcss, tech_logo.razorpay, tech_logo.stripe],
     },
     {
       imgUrl: projects.EcoWaste,
