@@ -10,30 +10,33 @@ const Skills = () => {
 
   const [activeCategory, setActiveCategory] = useState("Languages");
 
-  const techs = [
-    { id: 1, src: tech_logo.c, title: "C", style: "shadow-gray-500", category: "Languages" },
-    { id: 2, src: tech_logo.cpp, title: "C++", style: "shadow-blue-500", category: "Languages" },
-    { id: 3, src: tech_logo.javascript, title: "JavaScript", style: "shadow-yellow-400", category: "Languages" },
-    { id: 4, src: tech_logo.java, title: "Java", style: "shadow-orange-700", category: "Languages" },
-    { id: 5, src: tech_logo.python, title: "Python", style: "shadow-blue-400", category: "Languages" },
+  const techs = [ 
+    { id: 1, src: tech_logo.c, title: "C", style: "shadow-gray-400", category: "Languages" },
+    { id: 2, src: tech_logo.cpp, title: "C++", style: "shadow-blue-400", category: "Languages" },
+    { id: 3, src: tech_logo.javascript, title: "JavaScript", style: "shadow-yellow-300", category: "Languages" },
+    { id: 4, src: tech_logo.typescript, title: "TypeScript", style: "shadow-blue-400", category: "Languages" },
+    { id: 5, src: tech_logo.java, title: "Java", style: "shadow-orange-600", category: "Languages" },
+    { id: 6, src: tech_logo.python, title: "Python", style: "shadow-blue-300", category: "Languages" },
 
-    { id: 6, src: tech_logo.react, title: "React", style: "shadow-cyan-400", category: "Libraries/Frameworks" },
-    { id: 7, src: tech_logo.tailwindcss, title: "Tailwind", style: "shadow-sky-400", category: "Libraries/Frameworks" },
-    { id: 8, src: tech_logo.express, title: "Express.js", style: "shadow-zinc-400", category: "Libraries/Frameworks" },
-    { id: 9, src: tech_logo.node, title: "Node.js", style: "shadow-lime-500", category: "Libraries/Frameworks" },
-    { id: 10, src: tech_logo.php, title: "PHP", style: "shadow-indigo-500", category: "Libraries/Frameworks" },
+    { id: 7, src: tech_logo.nextjs, title: "Next.js", style: "shadow-gray-500", category: "Libraries/Frameworks" },
+    { id: 8, src: tech_logo.react, title: "React", style: "shadow-cyan-300", category: "Libraries/Frameworks" },
+    { id: 9, src: tech_logo.express, title: "Express.js", style: "shadow-gray-400", category: "Libraries/Frameworks" },
+    { id: 10, src: tech_logo.node, title: "Node.js", style: "shadow-green-500", category: "Libraries/Frameworks" },
+    { id: 11, src: tech_logo.tailwindcss, title: "Tailwind", style: "shadow-sky-300", category: "Libraries/Frameworks" },
+    { id: 12, src: tech_logo.php, title: "PHP", style: "shadow-indigo-400", category: "Libraries/Frameworks" },
 
-    { id: 11, src: tech_logo.postgresql, title: "PostgreSQL", style: "shadow-blue-800", category: "Databases" },
-    { id: 12, src: tech_logo.mongodb, title: "MongoDB", style: "shadow-green-600", category: "Databases" },
-    { id: 13, src: tech_logo.mysql, title: "MySQL", style: "shadow-blue-500", category: "Databases" },
+    { id: 13, src: tech_logo.postgresql, title: "PostgreSQL", style: "shadow-blue-700", category: "Databases" },
+    { id: 14, src: tech_logo.mongodb, title: "MongoDB", style: "shadow-green-500", category: "Databases" },
+    { id: 15, src: tech_logo.mysql, title: "MySQL", style: "shadow-blue-400", category: "Databases" },
 
-    { id: 14, src: tech_logo.git, title: "Git", style: "shadow-orange-500", category: "Tools" },
-    { id: 15, src: tech_logo.github, title: "GitHub", style: "shadow-neutral-500", category: "Tools" },
-    { id: 16, src: tech_logo.vscode, title: "VS Code", style: "shadow-blue-400", category: "Tools" },
-    { id: 17, src: tech_logo.postman, title: "Postman", style: "shadow-orange-400", category: "Tools" },
-    { id: 18, src: tech_logo.linux, title: "Linux", style: "shadow-yellow-300", category: "Tools" },
-    { id: 19, src: tech_logo.jupyter, title: "Jupyter", style: "shadow-orange-500", category: "Tools" },
-    { id: 20, src: tech_logo.neon, title: "Neon", style: "shadow-emerald-400", category: "Tools" },
+    { id: 16, src: tech_logo.git, title: "Git", style: "shadow-orange-400", category: "Tools" },
+    { id: 17, src: tech_logo.github, title: "GitHub", style: "shadow-gray-500", category: "Tools" },
+    { id: 18, src: tech_logo.prisma_orm, title: "Prisma", style: "shadow-blue-300", category: "Tools" },
+    { id: 19, src: tech_logo.supabase, title: "Supabase", style: "shadow-emerald-300", category: "Tools" },
+    { id: 20, src: tech_logo.neon, title: "Neon", style: "shadow-emerald-300", category: "Tools" },
+    { id: 21, src: tech_logo.postman, title: "Postman", style: "shadow-orange-300", category: "Tools" },
+    { id: 22, src: tech_logo.google_colab, title: "Google Colab", style: "shadow-yellow-200", category: "Tools" },
+    { id: 23, src: tech_logo.jupyter, title: "Jupyter", style: "shadow-orange-400", category: "Tools" },
   ];
 
   const categories = ["Languages", "Libraries/Frameworks", "Databases", "Tools"];

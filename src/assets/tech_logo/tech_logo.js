@@ -9,6 +9,7 @@ import express from "./express.svg";
 import fastapi from "./fastapi.svg";
 import git from "./git.svg";
 import github from "./github.svg";
+import google_colab from "./google_colab.svg";
 import gemini_ai from "./gemini_ai.svg";
 import html from "./html.svg";
 import java from "./java.svg";
@@ -24,7 +25,7 @@ import node from "./node.svg";
 import php from "./php.svg";
 import postgresql from "./postgresql.svg";
 import postman from "./postman.svg";
-import prisma from "./prisma.svg";
+import prisma_orm from "./prisma_orm.svg";
 import python from "./python.svg";
 import razorpay from "./razorpay.svg";
 import react from "./react.svg";
@@ -34,6 +35,7 @@ import streamlit from "./streamlit.svg";
 import stripe from "./stripe.svg";
 import supabase from './supabase.svg';
 import tailwindcss from "./tailwindcss.svg";
+import typescript from "./typescript.svg";
 import unsplash from "./unsplash.svg";
 import vercel from "./vercel.svg";
 import vscode from "./vscode.svg";
@@ -50,6 +52,7 @@ export const tech_logo = {
     fastapi,
     git,
     github,
+    google_colab,
     gemini_ai,
     html,
     java,
@@ -65,7 +68,7 @@ export const tech_logo = {
     php,
     postgresql,
     postman,
-    prisma,
+    prisma_orm,
     python,
     razorpay,
     react,
@@ -75,6 +78,7 @@ export const tech_logo = {
     stripe,
     supabase,
     tailwindcss,
+    typescript,
     unsplash,
     vercel,
     vscode,
