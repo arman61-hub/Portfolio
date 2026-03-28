@@ -14,6 +14,38 @@ const Projects = () => {
 
   const projectList = [
     {
+      imgUrl: projects.Evynt,
+      title: "Evynt",
+      description: "🎉 Evynt — An AI-powered platform to 🎯 plan events, 🗓️ manage schedules, 👥 handle participants, and ⚡ optimize experiences.",
+      githubLink: "https://github.com/arman61-hub/Evynt/",
+      projectLink: "https://evynt-rho.vercel.app/",
+      icons: [tech_logo.nextjs, tech_logo.postgresql, tech_logo.convex, tech_logo.unsplash, tech_logo.tailwindcss, tech_logo.gemini_ai, tech_logo.clerk, tech_logo.shadcn],
+    },
+    {
+      imgUrl: projects.AutoDek,
+      title: "AutoDek",
+      description: "🚗 AutoDek — An AI-powered car marketplace to 🔍 search cars by image, 📅 book test drives, and 🛠 manage listings via an admin dashboard.",
+      githubLink: "https://github.com/arman61-hub/AutoDek/",
+      projectLink: "https://autodek.vercel.app/",
+      icons: [tech_logo.nextjs, tech_logo.supabase, tech_logo.prisma, tech_logo.postgresql, tech_logo.tailwindcss, tech_logo.gemini_ai, tech_logo.clerk, tech_logo.shadcn],
+    },
+    {
+      imgUrl: projects.GClub,
+      title: "G Club",
+      description: "⛳ G Club — A premium golf charity platform to 🤝 manage subscriptions, 🏆 run exclusive draws, and 💳 handle secure payments.",
+      githubLink: "https://github.com/arman61-hub/GolfCharitySubscriptionPlatform",
+      projectLink: "https://golf-charity-subscription-platform-rust.vercel.app/",
+      icons: [tech_logo.react, tech_logo.node, tech_logo.express, tech_logo.postgresql, tech_logo.tailwindcss, tech_logo.supabase, tech_logo.stripe],
+    },
+    {
+      imgUrl: projects.IntraBot,
+      title: "IntraBot",
+      description: "🏢 IntraBot — A secure AI internal chatbot with 🔐 RBAC and 📚 RAG, delivering trusted, source-backed insights.",
+      githubLink: "https://github.com/arman61-hub/IntraBot/",
+      projectLink: "https://intrabot.streamlit.app/",
+      icons: [tech_logo.fastapi, tech_logo.streamlit, tech_logo.langchain, tech_logo.chromadb, tech_logo.gemini_ai],
+    },
+    {
       imgUrl: projects.GenCraftAi,
       title: "GenCraftAi",
       description: "✨ GenCraftAI — An AI-powered SaaS platform to ✍️ generate blogs, 📰 craft article titles, 🧾 review resumes, and 🖼️ create visuals — all in one creative hub.",

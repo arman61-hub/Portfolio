@@ -1,3 +1,7 @@
+import Evynt from "./Evynt.png";
+import AutoDek from "./AutoDek.png";
+import IntraBot from "./IntraBot.png";
+import GClub from "./GClub.png";
 import GenCraftAi from "./GenCraftAi.png";
 import DocNow from "./DocNow.png";
 import EcoWaste from "./EcoWaste.png";
@@ -8,6 +12,10 @@ import GameArena from "./GameArena.png";
 import CurrencyConverter from "./CurrencyConverter.png";
 
 export const projects = {
+    Evynt,
+    AutoDek,
+    IntraBot,
+    GClub,
     GenCraftAi,
     DocNow,
     EcoWaste,
