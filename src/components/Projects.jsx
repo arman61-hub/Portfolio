@@ -27,7 +27,7 @@ const Projects = () => {
       description: "🚗 AutoDek — An AI-powered car marketplace to 🔍 search cars by image, 📅 book test drives, and 🛠 manage listings via an admin dashboard.",
       githubLink: "https://github.com/arman61-hub/AutoDek/",
       projectLink: "https://autodek.vercel.app/",
-      icons: [tech_logo.nextjs, tech_logo.supabase, tech_logo.prisma, tech_logo.postgresql, tech_logo.tailwindcss, tech_logo.gemini_ai, tech_logo.clerk, tech_logo.shadcn],
+      icons: [tech_logo.nextjs, tech_logo.supabase, tech_logo.prisma_orm, tech_logo.postgresql, tech_logo.tailwindcss, tech_logo.gemini_ai, tech_logo.clerk, tech_logo.shadcn],
     },
     {
       imgUrl: projects.GClub,
